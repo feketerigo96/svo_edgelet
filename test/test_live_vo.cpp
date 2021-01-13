@@ -78,6 +78,8 @@ void BenchmarkNode::runFromFolder()
 {
 
     cv::VideoCapture cap(0);  // open the default camera
+    cap.set(CV_CAP_PROP_FRAME_WIDTH, 640);
+    cap.set(CV_CAP_PROP_FRAME_HEIGHT, 480);
 
     if (!cap.isOpened())  // check if we succeeded
         return ;
